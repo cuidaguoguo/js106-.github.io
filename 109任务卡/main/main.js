@@ -38,7 +38,7 @@ module.exports = function main(inputs) {
     //比对账单
     for (var a=0;a<loadAllItems.length;a++){
         for(var b=0;b<number.length;b++){
-            if(loadAllItems[a].barcode===number[b].barcode){
+            if(loadAllItems[a].barcode === number[b].barcode){
                 var price=loadAllItems[a].price*number[b].count;
                 bill.push({barcode:number[b].barcode,name:loadAllItems[a].name,count:number[b].count,price:price,danprice:loadAllItems[a].price,unit:loadAllItems[a].unit});
             }
